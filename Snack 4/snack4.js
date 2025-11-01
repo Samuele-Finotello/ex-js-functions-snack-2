@@ -4,4 +4,4 @@ function creaTimer(ms) {
   }, ms)
 }
 
-creaTimer(15000)
+creaTimer(2000)

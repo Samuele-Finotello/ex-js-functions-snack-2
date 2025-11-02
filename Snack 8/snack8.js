@@ -1,24 +1,16 @@
 function interval(n) {
 
-  if (n > 0) {
-    let intervalId;
-
-    intervalId = setInterval(() => {
+  const intervalId = setInterval(() => {
+    if (n > 0) {
       console.log(n)
       n--
-    }, 1000)
-
-    setTimeout(() => {
-      clearInterval(intervalId)
-    }, n * 1000)
-
-    setTimeout(() => {
+    }
+    else {
       console.log('Tempo scaduto!')
-    }, (n + 1) * 1000)
-  }
-  else {
-    console.log(`${n} e' minore o uguale a 0`)
-  }
+      clearInterval(intervalId)
+    }
+  }, 1000)
+
 }
 
 function contoAllaRovescia(n) {
